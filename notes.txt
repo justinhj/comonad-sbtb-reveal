@@ -12,8 +12,6 @@ Type classes are a programming pattern originiating in Haskell
 
 4. Quick look at Bartoscs' book
 
-
-
 Move FP in scala and category theory in scala to one slide
 
 One slide on benefits of pure FP

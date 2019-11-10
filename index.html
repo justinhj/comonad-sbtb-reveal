@@ -60,6 +60,25 @@
 			    </p>
 			  </section>
 
+			  <section  data-transition="slide">
+			    <h2>Pure Functions need help</h2>
+			      <p class="fragment">
+				Side effects (IO)
+			      </p>
+			      <p class="fragment">
+				Partiality (Option)
+			      </p>
+			      <p class="fragment">
+				Exceptions (MonadError)
+			      </p>
+			      <p class="fragment">
+				Nondeterminism (List)
+			      </p>
+			      <p class="fragment">
+				Mutable state (State)
+			      </p>
+			  </section>
+
                           <section  data-markdown data-transition="slide">
                             ### Cats functional programming library
 
@@ -87,6 +106,10 @@
 
 			  <section data-transition="slide">
 			    <h2>Functors, Monads and Comonads</h2>
+
+			    <p><b>Functional Programming with Effects</b> - <i>Rob Norris</i></p>
+			    <blockquote>"Find Functor, find Monad and see what's nearby"</blockquote>
+			    
 			    <img src="./images/typeclasseszoom.png" class="stretch" style="width: 66%"/>
 			  </section>
 
@@ -424,7 +447,7 @@ def boxFilter(width: Int):
 			  </section>
 
 			  <section data-transition="slide">
-			    <p>Transform in parallel then merge</p>
+			    <p>Transform into two images then merge</p>
 			    <p>
 			      <img src="./images/ck1ck2mirrorandidentity.png"/>
 			    </p>
@@ -435,9 +458,9 @@ def boxFilter(width: Int):
 				<pre><code class="scala" data-trim>
 			def conwayStep(fg: FocusedGrid[Int]): Int = {
 				val liveNeighbours = localSum(fg)
-				val live = getAt(fg, fg.focus)
+				val live = fg.extract == 1
 
-				if (live == 1) {
+				if(live) {
 					if (liveNeighbours >= 2 && liveNeighbours <= 3)
 						1
 					else
@@ -462,7 +485,8 @@ def boxFilter(width: Int):
 
 			  <section data-markdown data-transition="concave" style="font-size: 0.7em">
 				## Thank you!
-				### Questions
+				### Questions?
+				Slides [https://justinhj.github.io/comonad-sbtb-reveal/](https://justinhj.github.io/comonad-sbtb-reveal)
 			  </section>
 
 			  <section data-markdown data-transition="concave" style="font-size: 0.7em">
