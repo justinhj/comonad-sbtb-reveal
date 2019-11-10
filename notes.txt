@@ -1,32 +1,56 @@
-Speech notes
+Things to do:
 
-before we get to the Show typeclass I want to communicate
+1. Intro slide, Yoppworks
 
- i work at yoppworks providing functional and reactive solutions to business problems
- we're hiring
- 
+2. Functional programming slides
 
-I've done blog posts about fp and contributed
-  zio cats fetch tapir
+Benefits of FP
+Indicate to watch out for these benefits in the practical section at the end
 
-cats library is category theory
+3. Cats and category theory
+Type classes are a programming pattern originiating in Haskell
 
-category theory is not required to be a good fp programmer
-
-but if you find it fun then it's all good
-
-map, flatmap = functor and monad
-
-rob norris really good talk https://youtu.be/30q6BkBv5MY
-
-  a function maps values to values
-  evaluation always gives the same answer
-  referential transparency
-  function composition
-  talks about list, reader, option, state
-  
-add as reference? https://youtu.be/30q6BkBv5MY Rob Norris Functional Programming with Effects by Rob Norris
+4. Quick look at Bartoscs' book
 
 
 
-1. functional progamming benefits are
+Move FP in scala and category theory in scala to one slide
+
+One slide on benefits of pure FP
+  composition, testablility, equational reasoning
+
+First few slides is still weak
+
+Consider non-list examples for monad and functor
+
+Slide on effects maybe
+
+Drop the book recommendations until the last page
+
+Notes from Rob's Talk Functional Programming with Effects
+
+Something is referentially transparent or not
+That's a side effect
+we eval expressoins
+we reason by substitution
+we build bigger programs by composing smaller ones
+
+category theory
+a category is function composition
+object is types
+arrow is pure functions
+associative composition is andThen
+
+So what about
+
+partiality - non-total
+exceptions - errors
+nondertiminism - lists
+dependency injection - changes behaviour
+  logging
+mutable state
+  imperative
+
+
+
+

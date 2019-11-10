@@ -29,59 +29,35 @@
 
 				<h2>A Gentle Introduction to Comonads</h2>
 				<h3>Justin Heyes-Jones</h3>
-				<h3>Visit us on the Expo Floor</h3>
+				<h3>Software Developer</h3>
 				<img style="background-color:white;" src="./images/logo-yoppworks.png" class="stretch" style="width: 66%"/>
 
 			  </section>
 
-			  <section>
-			    <h2>Agenda</h2>
+			  <section  data-transition="slide">
+			    <h2>Properties of pure functions</h2>
 			    <p class="fragment">
-			      Type Classes
+			      Total
 			    </p>
 			    <p class="fragment">
-			      Functors, Monads, Comonads
+			      No side effects
 			    </p>
 			    <p class="fragment">
-			      Application: Image processing
-				</p>
-				<p class="fragment">
-				  Application: Conway's Game of Life
-				</p>
-
+			      Deterministic
+			    </p>
 			  </section>
 
-			  <section  data-markdown data-transition="slide">
-			    ### Functional Programming in Scala
-
-			    #### For more on functional programming
-
-			    ![Functional Programming in Scala book image](./images/fpinscala.jpg)
-			  </section>
-
-			  <section  data-markdown data-transition="slide">
-			    ### Category Theory for Programmers
-
-			    #### For more on Category Theory
-
-			    ![Category Theory book image](./images/categorytheory.png)
-			  </section>
-
-			  <section data-transition="slide">
-			    <h2>Type classes</h2>
-
+			  <section  data-transition="slide">
+			    <h2>Advantages of Pure Functions</h2>
 			    <p class="fragment">
-			      Like Java interfaces
+			      Easy to test
 			    </p>
-
 			    <p class="fragment">
-			      Ad-hoc polymorphism
+			      Equational reasoning
 			    </p>
-
 			    <p class="fragment">
-			      Haskell, Scala(Cats,Scalaz), Swift (Bow), Kotlin (Arrow)...
+			      Composable
 			    </p>
-
 			  </section>
 
                           <section  data-markdown data-transition="slide">
@@ -89,12 +65,20 @@
 
                             [https://typelevel.org/cats](https://typelevel.org/cats)
 
-                            Category Theory describes mathematical concepts as objects and mappings between them
-
                             ![Cats](./images/cats.png)
 			    ![CategoryTheoryDiagram](./images/catstheory.png)
 
                           </section>
+
+			  <section  data-markdown data-transition="slide">
+			    ### Category Theory for Programmers
+
+			    #### For more on Category Theory
+                            ##### Category Theory describes mathematical concepts as objects and mappings between them
+
+
+			    ![Category Theory book image](./images/categorytheory.png)
+			  </section>
 
 			  <section data-transition="slide">
 			    <h2>Type classes</h2>
@@ -134,23 +118,6 @@ implicit def showPerson = new Show[Person] {
 Person("Bob", 1989).show
 // res5: String = "Person: Bob born 1989"
 			      </code></pre>
-
-			  </section>
-
-			  <section data-transition="slide">
-			    <h2>Data Types</h2>
-			    <p>Cats and Scala have many useful data types with type class instances and syntax helpers</p>
-
-			    <pre class="fragment"><code class="scala" data-trim>
-				val e1 = 5.asRight[String]
-				e1: Either[String, Int] = Right(5)
-			      </code></pre>
-
-			    <pre class="fragment"><code class="scala" data-trim>
-val nel1: NonEmptyList[Int] = NonEmptyList.of(1,2,3)
-// nel1: NonEmptyList[Int] = NonEmptyList(1, List(2, 3))
-			      </code></pre>
-
 
 			  </section>
 
@@ -488,9 +455,9 @@ def boxFilter(width: Int):
 
 			  <section data-transition="slide">
 			    <p>Conway's Game of Life</p>
-			    <p>
-			      <img src="./images/conway.gif" class="stretch" style="width: 66%"/>
-			    </p>
+<video class="tab" controls>Your browser does not support the &lt;video&gt; tag.
+  <source src="./movies/fiddleconway.mov"/>
+</video>
 			  </section>
 
 			  <section data-markdown data-transition="concave" style="font-size: 0.7em">
