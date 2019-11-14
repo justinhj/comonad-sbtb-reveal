@@ -49,6 +49,7 @@ dependency injection - changes behaviour
 mutable state
   imperative
 
-
-
-
+new slide. pic of nero
+  my first conf talk
+  i've been practising this talk on my dog
+  he knows 
